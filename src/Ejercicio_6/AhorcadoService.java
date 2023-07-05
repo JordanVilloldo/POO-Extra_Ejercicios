@@ -20,7 +20,7 @@ public class AhorcadoService {
     public void crearJuego() {
 
         System.out.println("Ingrese la palabra");
-        char[] palabra = leer.next().toCharArray();
+        char[] palabra = leer.next().toLowerCase().toCharArray();// leemos por consola la palabra y la convertimos en minuscuka, y la separamos en caracteres, para guardarla en el array palabra
 
         System.out.println("Ingrese la cantidad maxima de intentos");
         int maxIntentos = leer.nextInt();
@@ -78,7 +78,7 @@ public class AhorcadoService {
 
         do {
             System.out.println("Ingrese una letra");
-            buscar(leer.next().charAt(0));
+            buscar(leer.next().toLowerCase().charAt(0)); // al metodo buscar la pasamos por parametro el caracter ingresado por consola, convirtiendolo en minuscula
             mostrarPalabra();
             intentos();
 
